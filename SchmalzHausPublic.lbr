@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.005" altunitdist="mm" altunit="mm"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
@@ -6131,6 +6131,30 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 </polygon>
 <text x="5.98" y="1.445" size="0.3" layer="21" font="vector" ratio="20">TM</text>
 </package>
+<package name="A4952">
+<description>Allegro A4952 motor driver</description>
+<smd name="P1" x="-1" y="-2.3" dx="1.65" dy="0.3" layer="1" rot="R90"/>
+<smd name="P2" x="-0.5" y="-2.3" dx="1.65" dy="0.3" layer="1" rot="R90"/>
+<smd name="P3" x="0" y="-2.3" dx="1.65" dy="0.3" layer="1" rot="R90"/>
+<smd name="P4" x="0.5" y="-2.3" dx="1.65" dy="0.3" layer="1" rot="R90"/>
+<smd name="P5" x="1" y="-2.3" dx="1.65" dy="0.3" layer="1" rot="R90"/>
+<smd name="P6" x="1" y="2.3" dx="1.65" dy="0.3" layer="1" rot="R90"/>
+<smd name="P7" x="0.5" y="2.3" dx="1.65" dy="0.3" layer="1" rot="R90"/>
+<smd name="P8" x="0" y="2.3" dx="1.65" dy="0.3" layer="1" rot="R90"/>
+<smd name="P9" x="-0.5" y="2.3" dx="1.65" dy="0.3" layer="1" rot="R90"/>
+<smd name="P10" x="-1" y="2.3" dx="1.65" dy="0.3" layer="1" rot="R90"/>
+<smd name="PAD" x="0" y="0" dx="1.73" dy="1.98" layer="1" rot="R90"/>
+<text x="-1.5" y="3.5" size="0.6096" layer="25">&gt;NAME</text>
+<text x="-1.5" y="-4.5" size="0.6096" layer="27">&gt;VALUE</text>
+<circle x="-2" y="-1.5" radius="0.14141875" width="0.127" layer="27"/>
+<wire x1="-1.5" y1="1.5" x2="1.5" y2="1.5" width="0.127" layer="21"/>
+<wire x1="1.5" y1="1.5" x2="1.5" y2="-1" width="0.127" layer="21"/>
+<wire x1="1.5" y1="-1" x2="1.5" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="1.5" y1="-1.5" x2="-1.5" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="-1.5" y1="-1.5" x2="-1.5" y2="-1" width="0.127" layer="21"/>
+<wire x1="-1.5" y1="-1" x2="-1.5" y2="1.5" width="0.127" layer="21"/>
+<wire x1="-1.5" y1="-1" x2="1.5" y2="-1" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="UBW32_BOARD">
@@ -6471,6 +6495,26 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 </symbol>
 <symbol name="CHIPKIT">
 <text x="0" y="0" size="1.27" layer="98" font="vector">chipKIT</text>
+</symbol>
+<symbol name="A4952">
+<description>A4952 Allegro DC Motor Driver</description>
+<pin name="FLTN" x="-12.7" y="5.08" length="short"/>
+<pin name="RTRY" x="-12.7" y="2.54" length="short"/>
+<pin name="IN2" x="-12.7" y="0" length="short"/>
+<pin name="IN1" x="-12.7" y="-2.54" length="short"/>
+<pin name="VREF" x="-12.7" y="-5.08" length="short"/>
+<pin name="VBB" x="12.7" y="-5.08" length="short" rot="R180"/>
+<pin name="OUT1" x="12.7" y="-2.54" length="short" rot="R180"/>
+<pin name="LSS" x="12.7" y="0" length="short" rot="R180"/>
+<pin name="OUT2" x="12.7" y="2.54" length="short" rot="R180"/>
+<pin name="GND" x="12.7" y="5.08" length="short" rot="R180"/>
+<pin name="PAD" x="0" y="-10.16" length="short" rot="R90"/>
+<wire x1="-10.16" y1="7.62" x2="-10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-7.62" x2="10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-7.62" x2="10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="7.62" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
+<text x="-10.16" y="10.16" size="1.27" layer="95">&gt;NAME</text>
+<text x="-10.16" y="7.62" size="1.27" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -6877,6 +6921,32 @@ By Brian Schmalz of Schmalz Haus LLC and Rick Anderson of FUBAR Labs</descriptio
 </gates>
 <devices>
 <device name="2MM" package="CHIPKIT_2MM">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="A4952">
+<description>Allegro A4952 DC motor driver</description>
+<gates>
+<gate name="G$1" symbol="A4952" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="A4952">
+<connects>
+<connect gate="G$1" pin="FLTN" pad="P1"/>
+<connect gate="G$1" pin="GND" pad="P10"/>
+<connect gate="G$1" pin="IN1" pad="P4"/>
+<connect gate="G$1" pin="IN2" pad="P3"/>
+<connect gate="G$1" pin="LSS" pad="P8"/>
+<connect gate="G$1" pin="OUT1" pad="P7"/>
+<connect gate="G$1" pin="OUT2" pad="P9"/>
+<connect gate="G$1" pin="PAD" pad="PAD"/>
+<connect gate="G$1" pin="RTRY" pad="P2"/>
+<connect gate="G$1" pin="VBB" pad="P6"/>
+<connect gate="G$1" pin="VREF" pad="P5"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
